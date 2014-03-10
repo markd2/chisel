@@ -72,7 +72,7 @@ class FBPrintIsExecutingInAnimationBlockCommand(fb.FBCommand):
     return 'panim'
 
   def description(self):
-    return 'Prints if the code is currently execution with a UIView animation block.'
+    return 'Prints if the code is currently executing within a UIView animation block.'
 
   def run(self, arguments, options):
     lldb.debugger.HandleCommand('p (BOOL)[UIView _isInAnimationBlock]')
