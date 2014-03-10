@@ -30,7 +30,7 @@ class FBFlickerViewCommand(fb.FBCommand):
     return 'Quickly show and hide a view to quickly help visualize where it is.'
 
   def args(self):
-    return [ fb.FBCommandArgument(arg='viewOrLayer', type='UIView*', help='The view to border.') ]
+    return [ fb.FBCommandArgument(arg='viewOrLayer', type='UIView*', help='The view to flicker.') ]
 
   def run(self, arguments, options):
     object = fb.evaluateObjectExpression(arguments[0])
@@ -50,7 +50,7 @@ class FBViewSearchCommand(fb.FBCommand):
     return 'Interactively search for a view by walking the hierarchy.'
 
   def args(self):
-    return [ fb.FBCommandArgument(arg='view', type='UIView*', help='The view to border.') ]
+    return [ fb.FBCommandArgument(arg='view', type='UIView*', help='The view to begin the search with.') ]
 
   def run(self, arguments, options):
     print '\nUse the following and (q) to quit.\n(w) move to superview\n(s) move to first subview\n(a) move to previous sibling\n(d) move to next sibling\n(p) print the hierarchy\n'

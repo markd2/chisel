@@ -33,7 +33,7 @@ class FBPrintViewHierarchyCommand(fb.FBCommand):
     return 'pviews'
 
   def description(self):
-    return 'Print the recursion description of <aView>.'
+    return 'Print the recursive description of <aView>.'
 
   def args(self):
     return [ fb.FBCommandArgument(arg='aView', type='UIView*', help='The view to print the description of.', default='(id)[UIWindow keyWindow]') ]
@@ -58,7 +58,7 @@ class FBPrintViewControllerHierarchyCommand(fb.FBCommand):
     return 'pvc'
 
   def description(self):
-    return 'Print the recursion description of <aViewController>.'
+    return 'Print the recursive description of <aViewController>.'
 
   def args(self):
     return [ fb.FBCommandArgument(arg='aViewController', type='UIViewController*', help='The view controller to print the description of.', default='(id)[(id)[UIWindow keyWindow] rootViewController]') ]
